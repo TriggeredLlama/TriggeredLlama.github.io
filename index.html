@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
-<button>Click for 1212</button>
+<button id="button">You shall not click Me!</button>
+<script>
+document.getElementById('button').onclick = function() {
+   document.getElementById('button').innerHTML = "I said no.";
+};
+</script>
+<noscript>Enable Javascript on your browser.</noscript>
 </body>
 </html>
