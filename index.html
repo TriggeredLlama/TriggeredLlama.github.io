@@ -3,8 +3,15 @@
 <body>
 <button id="button">You shall not click Me!</button>
 <script>
+function place(x_pos, y_pos) {
+  var d = document.getElementById('button');
+  d.style.position = "absolute";
+  d.style.left = x_pos+'px';
+  d.style.top = y_pos+'px';
+}
 document.getElementById('button').onclick = function() {
    document.getElementById('button').innerHTML = "I said no.";
+   place(200, 156)
 };
 </script>
 <noscript>Enable Javascript on your browser.</noscript>
