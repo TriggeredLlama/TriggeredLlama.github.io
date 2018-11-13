@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>1280 × 800
+<html>
 <body>
 <button id="button">You shall not click Me!</button>
 <script>
@@ -11,6 +11,7 @@ function place(x_pos, y_pos) {
   d.style.top = y_pos+'px';
 }
 document.getElementById('button').onclick = function() {
+  if not b = 5 then {
   document.getElementById('button').innerHTML = "I said no.";
   var miny=-640; 
   var maxy=640;  
@@ -20,7 +21,10 @@ document.getElementById('button').onclick = function() {
   var randomx =Math.floor(Math.random() * (+maxx - +minx)) + +minx
   place(randomy, randomx)
   b = b + 1
-};
+  }
+else {
+document.getElementById('button').innerHTML = "Ugh, fine. You can click me.";
+}};
 </script>
 <noscript>Enable Javascript on your browser.</noscript>
 </body>
