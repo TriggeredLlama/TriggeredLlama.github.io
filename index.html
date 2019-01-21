@@ -3,28 +3,19 @@
 <body>
 <button id="button">You shall not click Me!</button>
 <script>
-var b = 1
-function place(x_pos, y_pos) {
-  var d = document.getElementById('button');
-  d.style.position = "absolute";
-  d.style.left = x_pos+'px';
-  d.style.top = y_pos+'px';
+function startGame() {
+  myGameArea.start();
 }
-document.getElementById('button').onclick = function() {
-  if not b = 5 then {
-  document.getElementById('button').innerHTML = "I said no.";
-  var miny=-640; 
-  var maxy=640;  
-  var randomy =Math.floor(Math.random() * (+maxy - +miny)) + +miny
-  var minx=-400; 
-  var maxx=400;  
-  var randomx =Math.floor(Math.random() * (+maxx - +minx)) + +minx
-  place(randomy, randomx)
-  b = b + 1
+
+var myGameArea = {
+  canvas : document.createElement("canvas"),
+  start : function() {
+    this.canvas.width = 480;
+    this.canvas.height = 270;
+    this.context = this.canvas.getContext("2d");
+    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
   }
-else {
-document.getElementById('button').innerHTML = "Ugh, fine. You can click me.";
-}};
+}
 </script>
 <noscript>Enable Javascript on your browser.</noscript>
 </body>
